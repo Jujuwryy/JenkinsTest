@@ -12,6 +12,6 @@ class JenkinsDemoApplicationTests {
 
     @Test
     void contextLoads() {
-        logger.info("Testing context loading after pipeline creation");   
+        logger.info("Testing context loading after dev pipeline creation");   
     }
 }

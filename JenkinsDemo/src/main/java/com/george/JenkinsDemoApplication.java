@@ -15,6 +15,7 @@ public class JenkinsDemoApplication {
     @PostConstruct
     public void init() {
         logger.info("PostConstruct method executed");
+        
     }
 
     public static void main(String[] args) {

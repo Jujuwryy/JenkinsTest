@@ -13,5 +13,6 @@ class JenkinsDemoApplicationTests {
     @Test
     void contextLoads() {
         logger.info("Testing context loading");
+        logger.info("Second test case executing");
     }
 }

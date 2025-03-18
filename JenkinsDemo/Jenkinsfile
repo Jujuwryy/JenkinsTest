@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+    stage('Development') {
+      steps {
+        sh 'cd JenkinsDemo && mvn clean install'
+      }
+    }
+    stage('UAT') {
+      when { expression { currentBuild.resultIsBetterOrEqualTo('SUCCESS') } }
+      steps {
+        echo 'Deploying to UAT...'
+      }
+    }
+    stage('Prod') {
+      when { expression { currentBuild.resultIsBetterOrEqualTo('SUCCESS') } }
+      steps {
+        echo 'Deploying to Prod...'
+      }
+    }
+  }
+}
